@@ -1,6 +1,8 @@
 import Screen1 from './components/Screen1'
 import Screen2 from './components/Screen2'
 import Screen3 from './components/Screen3'
+import PostDetail from './components/PostDetail'
+
 import { DrawerNavigator } from 'react-navigation'
 
 export default DrawerNavigator({
@@ -12,8 +14,11 @@ export default DrawerNavigator({
         },
         Page3: {
             screen: Screen3,
-            
+        },
+        PostDetail : {
+            screen : PostDetail
         }
+        
     },
     {
         drawerPosition: 'left',

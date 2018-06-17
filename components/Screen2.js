@@ -1,6 +1,6 @@
 import React from 'react'
 import { View, Text, StyleSheet, ScrollView, ActivityIndicator } from 'react-native'
-import { Icon, Card } from 'react-native-elements'
+import { Icon, Card, Button } from 'react-native-elements'
 export default class Screen2 extends React.Component {
     static navigationOptions = {
         tabBarLabel: 'Users',
@@ -37,6 +37,7 @@ export default class Screen2 extends React.Component {
             })
     }
     render() {
+        const {navigate} = this.props.navigation
         if (this.state.loading) {
             return (
                 <ActivityIndicator size="large" color="#0000ff" />
@@ -48,6 +49,26 @@ export default class Screen2 extends React.Component {
 
                     <Card title="Post">
                         <Text>{post.title}</Text>
+                        <Button
+                            icon={
+                                <Icon
+                                    name='menu'
+                                    color='white'
+                                />
+                            }
+                            containerStyle={{ marginTop: 20 }}
+                            buttonStyle={{
+                                backgroundColor: "rgba(92, 99,216, 1)",
+                                width: 200,
+                                alignContent: 'center',
+                                height: 45,
+                                borderColor: "transparent",
+                                borderWidth: 0,
+                                borderRadius: 5
+                            }}
+                            title="Read post"
+                            onPress={() => navigate('PostDetail',{id: post.id})}
+                        />
                     </Card>
 
                 </View>

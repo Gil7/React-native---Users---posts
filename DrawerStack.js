@@ -12,7 +12,7 @@ import Router from './Router';
 
 const DrawerNavigation = StackNavigator(
     {
-        DrawerStack: { screen: Router }
+        DrawerStack: { screen: Router },
     }, 
     {
         headerMode: 'float',

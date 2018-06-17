@@ -2,11 +2,13 @@ import React from 'react'
 import {
   StackNavigator
 } from 'react-navigation';
+
 import Router from './DrawerStack'
 
 const Navigator = StackNavigator(
   {
-    drawerStack: { screen: Router }
+    drawerStack: { screen: Router },
+    
   }, 
   {
     headerMode: 'none',
